@@ -2,7 +2,7 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 91ea3f05-9de6-4711-8a7e-d6064d772718
-name: 'Kameleon Test'
+name: 'Multidevs are autocreated for Pull Requests'
 mail: admin@example.com
 slogan: ''
 page:

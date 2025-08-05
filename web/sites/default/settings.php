@@ -290,7 +290,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'api90nV3owmF5lakyCinapDTSox8iB6zcBjLJus7-ieI1OoPzoeZNvyLr2yElywauohp_wBEmg';
+$settings['hash_salt'] = '37c5LXC3u_U06cm-y0Hxfd7tZfz-fLzau5TmbxKrmWv59sLxZb04ks0l_646DlNTVvbeQfYn3g';
 
 /**
  * Deployment identifier.
@@ -906,6 +906,20 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 // if (isset($host_settings_file) && file_exists($host_settings_file) && is_readable($host_settings_file)) {
 //   require $host_settings_file;
 // }
+
+$databases['default']['default'] = array (
+  'database' => 'db',
+  'username' => 'db',
+  'password' => 'db',
+  'prefix' => '',
+  'host' => 'db',
+  'port' => 3306,
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
+
 /**
  * Determine whether this is a preproduction or production environment, and
  * then load the pantheon services.yml file.  This file should be named either
@@ -925,3 +939,4 @@ if (file_exists($pantheon_services_file)) {
 }
 
 include \Pantheon\Integrations\Assets::dir() . "/settings.pantheon.php";
+
